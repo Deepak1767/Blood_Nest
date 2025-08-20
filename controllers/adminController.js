@@ -10,14 +10,14 @@ const getDonarsListController = async (req, res) => {
     return res.status(200).send({
       success: true,
       Toatlcount: donarData.length,
-      message: "Donar List Fetched Successfully",
+      message: "Donor List Fetched Successfully",
       donarData,
     });
   } catch (error) {
     console.log(error);
     return res.status(500).send({
       success: false,
-      message: "Error In DOnar List API",
+      message: "Error In Donor List API",
       error,
     });
   }

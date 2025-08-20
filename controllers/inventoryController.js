@@ -78,13 +78,13 @@ const createInventoryController = async (req, res) => {
     await inventory.save();
     return res.status(201).send({
       success: true,
-      message: "New Blood Reocrd Added",
+      message: "New Blood Record Added",
     });
   } catch (error) {
     console.log(error);
     return res.status(500).send({
       success: false,
-      message: "Errro In Create Inventory API",
+      message: "Error In Create Inventory API",
       error,
     });
   }
@@ -109,7 +109,7 @@ const getInventoryController = async (req, res) => {
     console.log(error);
     return res.status(500).send({
       success: false,
-      message: "Error In Get All Inventory",
+      message: "Error In Getting All Inventory",
       error,
     });
   }
@@ -125,7 +125,7 @@ const getInventoryHospitalController = async (req, res) => {
       .sort({ createdAt: -1 });
     return res.status(200).send({
       success: true,
-      messaage: "get hospital comsumer records successfully",
+      messaage: "Get hospital comsumer records successfully",
       inventory,
     });
   } catch (error) {
@@ -175,14 +175,14 @@ const getDonarsController = async (req, res) => {
 
     return res.status(200).send({
       success: true,
-      message: "Donar Record Fetched Successfully",
+      message: "Donor Record Fetched Successfully",
       donars,
     });
   } catch (error) {
     console.log(error);
     return res.status(500).send({
       success: false,
-      message: "Error in Donar records",
+      message: "Error in Donor records",
       error,
     });
   }

@@ -9,7 +9,7 @@ const registerController = async (req, res) => {
     if (exisitingUser) {
       return res.status(200).send({
         success: false,
-        message: "User ALready exists",
+        message: "User already exists",
       });
     }
     //hash password
@@ -48,7 +48,7 @@ const loginController = async (req, res) => {
     if (user.role !== req.body.role) {
       return res.status(500).send({
         success: false,
-        message: "role dosent match",
+        message: "Role doesn't match",
       });
     }
     //compare password
